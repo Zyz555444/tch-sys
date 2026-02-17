@@ -36,3 +36,4 @@ function newRandFt() {
 
 
     newRandMain();
+}
