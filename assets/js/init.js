@@ -71,7 +71,7 @@ function initFnEle(fnList, fnListReq) {
 
 function initFunctions() {
     // console.log(fnItems);
-    const fnFns = {"rand-stu": randStuFn, "count-down": countDownFn};
+    const fnFns = {"rand-stu": randStuFn, "count-down": countDownFn, "calculator": calculatorFn, "board": boardFn, "grade-stats": gradeStatsFn};
     for (let item of fnItems) {
         let itemInfo = item.querySelector(".fn-item-info");
         let itemReq = new XMLHttpRequest();
