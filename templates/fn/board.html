@@ -1,0 +1,40 @@
+<div class="fn-item-container">
+    <div class="board-container">
+        <div class="board-controls">
+            <input type="color" id="board-color" value="#000000">
+            <input type="range" id="board-brush-size" min="1" max="20" value="5">
+            <button id="board-eraser">橡皮擦</button>
+            <button id="board-clear">清空画布</button>
+        </div>
+        <canvas id="board-canvas" class="board-canvas"></canvas>
+    </div>
+</div>
+
+<style>
+.board-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.board-controls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.board-canvas {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: crosshair;
+}
+#board-eraser.active {
+    background-color: #ff9999;
+}
+</style>

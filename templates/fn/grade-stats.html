@@ -1,0 +1,75 @@
+<div class="fn-item-container">
+    <div class="grade-stats-container">
+        <form id="grade-form" class="grade-form">
+            <input type="text" id="grade-name" placeholder="学生姓名" required>
+            <input type="number" id="grade-score" placeholder="成绩（0-100）" min="0" max="100" required>
+            <button type="submit" class="general-btn">添加成绩</button>
+        </form>
+        <div class="grade-stats-panel">
+            <div id="grade-stats">
+                <div>平均分: <span id="grade-avg">0</span></div>
+                <div>最高分: <span id="grade-max">0</span></div>
+                <div>最低分: <span id="grade-min">0</span></div>
+            </div>
+            <ul id="grade-list" class="grade-list"></ul>
+        </div>
+    </div>
+</div>
+
+<style>
+.grade-stats-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.grade-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.grade-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.grade-stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#grade-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+.grade-list {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.grade-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.grade-delete {
+    background-color: #ff6666;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+.grade-delete:hover {
+    background-color: #ff3333;
+}
+</style>

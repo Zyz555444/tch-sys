@@ -1,0 +1,68 @@
+<div class="fn-item-container">
+    <div class="calculator">
+        <div id="calculator-display" class="calculator-display">0</div>
+        <div class="calculator-buttons">
+            <button class="calculator-btn">C</button>
+            <button class="calculator-btn">/</button>
+            <button class="calculator-btn">*</button>
+            <button class="calculator-btn">-</button>
+            <button class="calculator-btn">7</button>
+            <button class="calculator-btn">8</button>
+            <button class="calculator-btn">9</button>
+            <button class="calculator-btn">+</button>
+            <button class="calculator-btn">4</button>
+            <button class="calculator-btn">5</button>
+            <button class="calculator-btn">6</button>
+            <button class="calculator-btn">+</button>
+            <button class="calculator-btn">1</button>
+            <button class="calculator-btn">2</button>
+            <button class="calculator-btn">3</button>
+            <button class="calculator-btn">=</button>
+            <button class="calculator-btn" style="grid-column: span 2;">0</button>
+            <button class="calculator-btn">.</button>
+            <button class="calculator-btn">=</button>
+        </div>
+    </div>
+</div>
+
+<style>
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.calculator-display {
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 24px;
+    line-height: 60px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.calculator-btn {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+.calculator-btn:hover {
+    background-color: #d0d0d0;
+}
+.calculator-btn:active {
+    background-color: #c0c0c0;
+}
+</style>
