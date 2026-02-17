@@ -2,6 +2,11 @@ function calculatorMain() {
     // 获取页面元素
     const display = document.getElementById('calculator-display');
     const buttons = document.querySelectorAll('.calculator-btn');
+    // 检查元素是否存在，不存在则等待后重试
+    if (!display || buttons.length === 0) {
+        setTimeout(calculatorMain, 50);
+        return;
+    }
     
     let currentValue = '';
     let previousValue = '';
