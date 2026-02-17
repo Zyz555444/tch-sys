@@ -1,6 +1,11 @@
 function gradeStatsMain() {
     // 获取页面元素
     const gradeForm = document.getElementById('grade-form');
+    // 检查元素是否存在，不存在则等待后重试
+    if (!gradeForm) {
+        setTimeout(gradeStatsMain, 50);
+        return;
+    }
     const nameInput = document.getElementById('grade-name');
     const gradeInput = document.getElementById('grade-score');
     const gradeList = document.getElementById('grade-list');
