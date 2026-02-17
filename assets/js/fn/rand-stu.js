@@ -384,5 +384,10 @@ function randStuFn() {
             unrealStu.push(stuInfo[i]["id"]);
         }
     }
-    randStuMain();
+    // 页面加载完成后执行
+    if (document.readyState === 'complete') {
+        randStuMain();
+    } else {
+        document.addEventListener('DOMContentLoaded', randStuMain);
+    }
 }
