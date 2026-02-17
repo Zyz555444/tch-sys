@@ -1,6 +1,10 @@
 function boardMain() {
     // 获取画布元素
     const canvas = document.getElementById('board-canvas');
+    if (!canvas) {
+        setTimeout(boardMain, 50);
+        return;
+    }
     const ctx = canvas.getContext('2d');
     const colorPicker = document.getElementById('board-color');
     const brushSize = document.getElementById('board-brush-size');
