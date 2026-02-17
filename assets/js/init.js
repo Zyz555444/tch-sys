@@ -92,7 +92,10 @@ function initFunctions() {
         itemEle.title = itemTitle;
         itemObj.btn.addEventListener("click", function () {
             openPopup(itemEle, itemObj, "fn");
-            fnFns[itemEle.id]();
+            // 等待弹窗模板加载完成后再初始化功能
+            setTimeout(() => {
+                fnFns[itemEle.id]();
+            }, 100);
         });
     }
 }
